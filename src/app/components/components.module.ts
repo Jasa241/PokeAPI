@@ -6,10 +6,13 @@ import { MyPokemonsComponent } from './my-pokemons/my-pokemons.component';
 import { DetailsPokemonsComponent } from './details-pokemons/details-pokemons.component';
 import { LoginComponent } from './login/login.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { LayoutComponent } from './layout/layout.component';
 
 //Angular Material
 import { MatCardModule } from '@angular/material/card';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     CardPokemonComponent,
@@ -17,11 +20,15 @@ import { MatCardModule } from '@angular/material/card';
     MyPokemonsComponent,
     DetailsPokemonsComponent,
     LoginComponent,
-    PerfilComponent
+    PerfilComponent,
+    LayoutComponent
   ],
   imports: [
     CommonModule,
-    MatCardModule
+    RouterModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatSidenavModule,
   ],
   exports:[
     CardPokemonComponent,
@@ -29,7 +36,8 @@ import { MatCardModule } from '@angular/material/card';
     MyPokemonsComponent,
     DetailsPokemonsComponent,
     LoginComponent,
-    PerfilComponent
+    PerfilComponent,
+    LayoutComponent
   ]
 })
 export class ComponentsModule { }

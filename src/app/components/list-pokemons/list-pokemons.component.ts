@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPokemonsComponent implements OnInit {
 
+  numbers = [1,2,2,23,4,1,1]
+
   constructor() { }
 
   ngOnInit(): void {
